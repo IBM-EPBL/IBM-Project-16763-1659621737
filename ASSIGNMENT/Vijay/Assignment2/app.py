@@ -32,7 +32,7 @@ def register():
         else:
             insert_sql = "INSERT INTO  users VALUES (?, ?, ?)"
             prep_stmt = ibm_db.prepare(conn, insert_sql)
-            ibm_db.bind_param(prep_stmt, 1, username)
+            ibm_db.bind_param(prep_stmt, 1, username) 
             ibm_db.bind_param(prep_stmt, 2, email)
             ibm_db.bind_param(prep_stmt, 3, password)
             ibm_db.execute(prep_stmt)
